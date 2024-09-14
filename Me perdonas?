@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>¿Me perdonas?</title>
+</head>
+<body>
+	<h1>¿Me perdonas?</h1>
+	<button id="sí">Sí</button>
+	<button id="no">No</button>
+	<script src="script.js"></script>
+</body>
+</html>body {
+	background-color: #f2f2f2;
+}
+
+button {
+	background-color: #4CAF50;
+	color: #ffffff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #3e8e41;
+}
+
+#no.clicked {
+	transform: scale(1.2);
+}const síButton = document.getElementById('sí');
+const noButton = document.getElementById('no');
+
+síButton.addEventListener('click', () => {
+	alert('¡Gracias por perdonarme!');
+});
+
+noButton.addEventListener('click', () => {
+	noButton.classList.add('clicked');
+	alert('Entiendo. Quizás la próxima vez.');
+});
